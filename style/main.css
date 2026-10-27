@@ -1,0 +1,72 @@
+:root {
+  --animation-duration: 0s;
+  --start-x: 0px;
+  --start-y: 0px;
+  --end-x: 0px;
+  --end-y: 0px;
+  --dir: downright;
+}
+
+body {
+  margin: 0;
+  background-color: #000;
+  color: #fff;
+  font-family: Monospace;
+  font-size: 13px;
+  line-height: 24px;
+  overscroll-behavior: none;
+  overflow: hidden;
+}
+
+#body {
+  overflow: hidden;
+  height: 100vh;
+}
+
+@keyframes side-bounce {
+  from {
+    translate: var(--start-x) var(--start-y);
+  }
+  to {
+    translate: var(--end-x) var(--end-y);
+  }
+}
+@keyframes stay-still {
+  from {
+    translate: var(--end-x) var(--end-y);
+  }
+  to {
+    translate: var(--end-x) var(--end-y);
+  }
+}
+
+#logo-container {
+  animation-name: stay-still;
+  animation-duration: var(--animation-duration);
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+  animation-fill-mode: forwards;
+  animation-direction: normal;
+  animation-timing-function: linear;
+}
+
+#logo-container.go {
+  animation-name: side-bounce;
+}
+
+#logo {
+  width: 10vw;
+  height: 10vh;
+  &.red {
+    filter: invert(17%) sepia(90%) saturate(6835%) hue-rotate(5deg)
+      brightness(110%) contrast(125%);
+  }
+  &.green {
+    filter: invert(49%) sepia(68%) saturate(1963%) hue-rotate(83deg)
+      brightness(121%) contrast(122%);
+  }
+  &.blue {
+    filter: invert(8%) sepia(100%) saturate(7053%) hue-rotate(248deg)
+      brightness(96%) contrast(144%);
+  }
+}

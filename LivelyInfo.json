@@ -1,0 +1,13 @@
+{
+  "AppVersion": "1.0.0.0",
+  "Title": "DVD Logo bounce",
+  "Thumbnail": "dvd_logo.png",
+  "Preview": "dvd_logo.png",
+  "Desc": "Bouncing DVD logo",
+  "Author": "huntinator7",
+  "License": "See license.txt",
+  "Contact": "https://github.com/huntinator7/dvd_logo",
+  "Type": 1,
+  "FileName": "index.html",
+  "IsAbsolutePath": false
+}
